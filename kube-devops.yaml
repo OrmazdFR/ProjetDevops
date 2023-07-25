@@ -1,0 +1,36 @@
+# NAMESPACE
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devops
+  labels:
+    name: devops
+
+# SERVICE
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-service
+spec:
+  selector:
+    app.kubernetes.io/name: devops-preprod
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+
+# POD
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devops-preprod
+  namespace: devops
+  labels:
+    app.kubernetes.io/name: devops-preprod
+spec:
+  containers:
+  - name: devopspreprod
+    image: ormazd/devopspreprod:latest
+    ports:
+      - containerPort: 3000
+        name: react-port

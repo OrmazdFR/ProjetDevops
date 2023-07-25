@@ -16,3 +16,10 @@ docker run --name devopspreprod -p 3000:3000 -d ormazd/devopspreprod
 
 ## Main container
 docker run --name devopspreprod -p 3001:3000 -d ormazd/devopsmain
+
+# Init kubernetes
+`kubectl create namespace devops`
+
+`kubectl apply -n devops -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml`
+
+`kubectl config set-context --current --namespace=devops`
