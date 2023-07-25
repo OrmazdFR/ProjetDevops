@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          For new branch.
+          Ceci est le test parfait pour savoir si watchtower fonctionne bien !
         </p>
         <a
           className="App-link"
