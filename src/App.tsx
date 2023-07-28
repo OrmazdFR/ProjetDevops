@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Ceci est le test parfait pour savoir si watchtower fonctionne bien !
+          Ceci est le test parfait pour savoir si watchtower fonctionne bien ! OUI
         </p>
         <a
           className="App-link"
